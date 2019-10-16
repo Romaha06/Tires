@@ -48,7 +48,7 @@ public class SearchFormCar {
     public void size() {
         System.out.println("Choose from Size.");
         driver.findElement(selectSize).click();
-        driver.findElement(By.xpath("//option[@value='16']")).click();
+        driver.findElement(By.xpath("//option[@value='17']")).click();
     }
 
     public void search() {

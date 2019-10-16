@@ -16,7 +16,7 @@ public class TiresSearchTest extends BasePage {
         searchFormCar.size();
         searchFormCar.search();
         Thread.sleep(5000);
-        searchFormCar.checkPageURL("https://reifen.pkwteile.de/winterreifen/255-65-r16");
+        searchFormCar.checkPageURL("https://reifen.pkwteile.de/winterreifen/255-65-r17");
     }
 
     @Test
@@ -26,12 +26,29 @@ public class TiresSearchTest extends BasePage {
         mainPagaTires.open();
         mainPagaTires.cookiesButton();
         mainPagaTires.clickMenuButtonOffroadSuv();
+        searchFormCar.formSeasonAll();
+        searchFormCar.width();
+        searchFormCar.height();
+        searchFormCar.size();
+        searchFormCar.search();
+        Thread.sleep(5000);
+        searchFormCar.checkPageURL("https://reifen.pkwteile.de/offroadreifen/ganzjahresreifen/255-65-r17");
+    }
+
+    @Test
+    public void searchLLKW() throws InterruptedException {
+        MainPagaTires mainPagaTires = new MainPagaTires(driver);
+        SearchFormCar searchFormCar = new SearchFormCar(driver);
+        mainPagaTires.open();
+        mainPagaTires.cookiesButton();
+        mainPagaTires.clickMenubuttonLLKW();
         searchFormCar.formSeasonSummer();
         searchFormCar.width();
         searchFormCar.height();
         searchFormCar.size();
         searchFormCar.search();
         Thread.sleep(5000);
-        searchFormCar.checkPageURL("https://reifen.pkwteile.de/offroadreifen/sommerreifen/255-65-r16");
+        searchFormCar.checkPageURL("https://reifen.pkwteile.de/transporterreifen/sommerreifen/255-65-r17");
+
     }
 }
