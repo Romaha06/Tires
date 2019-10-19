@@ -1,3 +1,5 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +10,7 @@ import org.testng.Assert;
 public class MainPagaTires {
 
     WebDriver driver;
+    UIutilities uIutilities;
 
     private By buttonCookies = By.xpath("//div[@class='block-cookies__button']");
     private By buttonPKW = By.xpath("//img[@alt='PKW']");
@@ -17,6 +20,7 @@ public class MainPagaTires {
 
     public MainPagaTires(WebDriver driver) {
         this.driver = driver;
+        uIutilities = new UIutilities(driver);
     }
 
     public void open() {
@@ -29,8 +33,8 @@ public class MainPagaTires {
 
         System.out.println("Click Cookies button.");
         try {
-            WebDriverWait wait = new WebDriverWait(driver, 20);
-            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='block-cookies__button']")));
+            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(buttonCookies));
             element.click();
         } catch (Exception e) {
             Assert.assertTrue(true);
@@ -39,21 +43,21 @@ public class MainPagaTires {
 
     public void clickMenuButtonPKW() {
         System.out.println("Choosed type 'PKW'");
-        driver.findElement(buttonPKW).click();
+       uIutilities.click(buttonPKW,3,10);
     }
 
     public void clickMenuButtonOffroadSuv() {
         System.out.println("Choosed type 'buttonOffroad_SUV'");
-        driver.findElement(buttonOffroad_SUV).click();
+        uIutilities.click(buttonOffroad_SUV,3,10);
     }
 
     public void clickMenubuttonLLKW() {
         System.out.println("Choosed type 'buttonOffroad_SUV'");
-        driver.findElement(buttonLLKW_Transporterreifen).click();
+        uIutilities.click(buttonLLKW_Transporterreifen,3,10);
     }
 
     public void clickMenubuttonbuttonMotorradreifen() {
         System.out.println("Choosed type 'buttonOffroad_SUV'");
-        driver.findElement(buttonMotorradreifen).click();
+        uIutilities.click(buttonMotorradreifen,3,10);
     }
 }
