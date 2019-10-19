@@ -1,3 +1,5 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -5,6 +7,7 @@ import org.testng.Assert;
 public class SearchFormCar {
 
     WebDriver driver;
+    UIutilities uIutilities;
 
     private By selectSeasonsWinter = By.xpath("//div[@class='season-tyre__label--winter']");
     private By selectSeasonsSummer = By.xpath("//div[@class='season-tyre__label--summer']");
@@ -16,16 +19,17 @@ public class SearchFormCar {
 
     public SearchFormCar(WebDriver driver) {
         this.driver = driver;
+        uIutilities = new UIutilities(driver);
     }
 
     public void formSeasonWinter() {
         System.out.println("Choose from Seasons: Winter");
-        driver.findElement(selectSeasonsWinter).click();
+        uIutilities.click(selectSeasonsWinter, 3,10);
     }
 
     public void formSeasonSummer() {
         System.out.println("Choose from Seasons: Summer");
-        driver.findElement(selectSeasonsSummer).click();
+        uIutilities.click(selectSeasonsSummer, 3,10);
     }
 
     public void formSeasonAll() {
@@ -35,28 +39,36 @@ public class SearchFormCar {
 
     public void width() {
         System.out.println("Choose from Widht.");
-        driver.findElement(selectWidth).click();
-        driver.findElement(By.xpath("//option[@value='255']")).click();
+        uIutilities.click(selectWidth,3,10);
+        uIutilities.click(By.xpath("//option[@value='255']"),3,10);
     }
 
     public void height() {
         System.out.println("Choose from Height.");
-        driver.findElement(selectHeight).click();
-        driver.findElement(By.xpath("//option[@value='65']")).click();
+        uIutilities.click(selectHeight,3,10);
+        uIutilities.click(By.xpath("//option[@value='65']"),3,10);
     }
 
     public void size() {
         System.out.println("Choose from Size.");
-        driver.findElement(selectSize).click();
-        driver.findElement(By.xpath("//option[@value='17']")).click();
+        uIutilities.click(selectSize,3,10);
+        uIutilities.click(By.xpath("//option[@value='17']"),3,10);
+    }
+
+    public void selectionOfParameters(){
+        width();
+        height();
+        size();
     }
 
     public void search() {
         System.out.println("Click button Search.");
-        driver.findElement(buttonTyresSearch).click();
+        uIutilities.click(buttonTyresSearch,3,10);
     }
 
     public void checkPageURL(String expectedURL) {
-        Assert.assertEquals(driver.getCurrentUrl(), expectedURL);
+        uIutilities.waitLoadPageUsingScript();
+        Assert.assertEquals(driver.getCurrentUrl(),expectedURL);
     }
+
 }
