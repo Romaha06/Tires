@@ -1,4 +1,3 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -10,8 +9,8 @@ public class BaseTest {
 
     @BeforeTest
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Tires\\Tires\\chromedriver.exe");
+        this.driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
