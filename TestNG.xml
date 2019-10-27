@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tires Suite" parallel="false">
+    <listeners>
+        <listener class-name="utils.TestListener"/>
+    </listeners>
+    <test name="SearchSelector">
+        <groups>
+            <run>
+                <include name="Regression"/>
+                <exclude name="SKIP"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TiresSearchTest"/>
+        </classes>
+    </test>
+</suite>

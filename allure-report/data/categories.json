@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "expected [https://reifen.pkwteile.de/offroadreifen/ganzjahresreifen/255-65-r] but found [https://reifen.pkwteile.de/offroadreifen/ganzjahresreifen/255-65-r17]",
+      "children" : [ {
+        "name" : "searchOffroadSuv",
+        "uid" : "3867c14a36015da7",
+        "parentUid" : "c91279add1302091a0e646efc20d64f9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1572174872467,
+          "stop" : 1572174900003,
+          "duration" : 27536
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c91279add1302091a0e646efc20d64f9"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

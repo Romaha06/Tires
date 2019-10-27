@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sun Oct 27 14:14:32 MSK 2019","Sun Oct 27 14:15:00 MSK 2019","27536","Tires Suite","SearchSelector","TiresSearchTest","TiresSearchTest","searchOffroadSuv","searchOffroadSuv",""
+"passed","Sun Oct 27 14:15:00 MSK 2019","Sun Oct 27 14:15:25 MSK 2019","25869","Tires Suite","SearchSelector","TiresSearchTest","TiresSearchTest","searchPKW","searchPKW",""
+"passed","Sun Oct 27 14:14:10 MSK 2019","Sun Oct 27 14:14:32 MSK 2019","21472","Tires Suite","SearchSelector","TiresSearchTest","TiresSearchTest","searchLLKW","searchLLKW",""

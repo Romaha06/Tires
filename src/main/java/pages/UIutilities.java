@@ -17,6 +17,7 @@ public class UIutilities {
         wait = new WebDriverWait(driver, 5);
     }
 
+
     protected void click(By element, int retry, int timeoutSeconds) {
 
         // If the item is not found, try to find again
