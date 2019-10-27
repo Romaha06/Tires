@@ -1,3 +1,4 @@
+import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 import pages.MainPagaTires;
 import pages.SearchFormCar;
@@ -5,10 +6,11 @@ import pages.SearchFormCar;
 public class TiresSearchTest extends BaseTest {
 
 
-    @Test
+    @Feature("searchPKW")
+    @Test(groups = {"Regression"})
     public void searchPKW() {
-        MainPagaTires mainPagaTires = new MainPagaTires(driver);
-        SearchFormCar searchFormCar = new SearchFormCar(driver);
+        MainPagaTires mainPagaTires = new MainPagaTires();
+        SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTires.open();
         mainPagaTires.cookiesButton();
         mainPagaTires.clickMenuButtonPKW();
@@ -16,13 +18,13 @@ public class TiresSearchTest extends BaseTest {
         searchFormCar.selectionOfParameters();
         searchFormCar.search();
         searchFormCar.checkPageURL("https://reifen.pkwteile.de/winterreifen/255-65-r17");
-
     }
 
-    @Test
+    @Feature("searchOffroadSuv")
+    @Test(groups = {"Regression"})
     public void searchOffroadSuv() {
-        MainPagaTires mainPagaTires = new MainPagaTires(driver);
-        SearchFormCar searchFormCar = new SearchFormCar(driver);
+        MainPagaTires mainPagaTires = new MainPagaTires();
+        SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTires.open();
         mainPagaTires.cookiesButton();
         mainPagaTires.clickMenuButtonOffroadSuv();
@@ -32,10 +34,11 @@ public class TiresSearchTest extends BaseTest {
         searchFormCar.checkPageURL("https://reifen.pkwteile.de/offroadreifen/ganzjahresreifen/255-65-r17");
     }
 
-    @Test
+    @Feature("searchLLKW")
+    @Test(groups = {"Regression"})
     public void searchLLKW() {
-        MainPagaTires mainPagaTires = new MainPagaTires(driver);
-        SearchFormCar searchFormCar = new SearchFormCar(driver);
+        MainPagaTires mainPagaTires = new MainPagaTires();
+        SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTires.open();
         mainPagaTires.cookiesButton();
         mainPagaTires.clickMenubuttonLLKW();
