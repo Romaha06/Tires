@@ -5,7 +5,6 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 public class UIutilities {
@@ -31,13 +30,13 @@ public class UIutilities {
                 System.out.println("Searching element" + element.toString() + ". Retry - " + (retry - i));
                 driver.findElement(element).click();
                 break;
-            } catch (NoSuchElementException | StaleElementReferenceException | ElementNotInteractableException ex) {
+            } catch (org.openqa.selenium.NoSuchElementException | StaleElementReferenceException | ElementNotInteractableException ex) {
                 try {
                     System.out.println("Searching element" + element.toString() + ". Retry - " + (retry - i));
                     Thread.sleep(TimeUnit.SECONDS.toMillis(timeoutSeconds));
                     driver.findElement(element).click();
                     break;
-                } catch (NoSuchElementException | StaleElementReferenceException | ElementNotInteractableException | InterruptedException ex2) {
+                } catch (org.openqa.selenium.NoSuchElementException | StaleElementReferenceException | ElementNotInteractableException | InterruptedException ex2) {
                     if (i == 0) {
                         try {
                             throw new Exception("Failed to find element " + element.toString());
@@ -51,13 +50,14 @@ public class UIutilities {
         }
     }
 
+
     public void waitLoadPageUsingScript() {
         System.err.println("Wait load page using javascript");
         ExpectedCondition<Boolean> expectation =
                 driver -> ((JavascriptExecutor) driver)
                         .executeScript("return document.readyState").toString().equals("complete");
         try {
-            Thread.sleep(500);
+            Thread.sleep(5000);
             wait.until(expectation);
         } catch (Throwable error) {
             Assert.fail("Timeout waiting for Page Load Request to complete.");

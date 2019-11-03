@@ -2,9 +2,9 @@ import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
 import pages.MainPagaTires;
 import pages.SearchFormCar;
+import pages.SearchFormMoto;
 
 public class TiresSearchTest extends BaseTest {
-
 
     @Feature("searchPKW")
     @Test(groups = {"Regression"})
@@ -12,12 +12,12 @@ public class TiresSearchTest extends BaseTest {
         MainPagaTires mainPagaTires = new MainPagaTires();
         SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTires.open();
-        mainPagaTires.cookiesButton();
+        mainPagaTires.clickCookiesButton();
         mainPagaTires.clickMenuButtonPKW();
-        searchFormCar.formSeasonWinter();
+        mainPagaTires.formSeasonWinter();
         searchFormCar.selectionOfParameters();
-        searchFormCar.search();
-        searchFormCar.checkPageURL("https://reifen.pkwteile.de/winterreifen/255-65-r17");
+        mainPagaTires.search();
+        mainPagaTires.checkPageURL("https://reifen.pkwteile.de/winterreifen/205-55-r16");
     }
 
     @Feature("searchOffroadSuv")
@@ -26,12 +26,12 @@ public class TiresSearchTest extends BaseTest {
         MainPagaTires mainPagaTires = new MainPagaTires();
         SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTires.open();
-        mainPagaTires.cookiesButton();
+        mainPagaTires.clickCookiesButton();
         mainPagaTires.clickMenuButtonOffroadSuv();
-        searchFormCar.formSeasonAll();
+        mainPagaTires.formSeasonSummer();
         searchFormCar.selectionOfParameters();
-        searchFormCar.search();
-        searchFormCar.checkPageURL("https://reifen.pkwteile.de/offroadreifen/ganzjahresreifen/255-65-r17");
+        mainPagaTires.search();
+        mainPagaTires.checkPageURL("https://reifen.pkwteile.de/offroadreifen/sommerreifen/205-55-r16");
     }
 
     @Feature("searchLLKW")
@@ -40,11 +40,25 @@ public class TiresSearchTest extends BaseTest {
         MainPagaTires mainPagaTires = new MainPagaTires();
         SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTires.open();
-        mainPagaTires.cookiesButton();
+        mainPagaTires.clickCookiesButton();
         mainPagaTires.clickMenubuttonLLKW();
-        searchFormCar.formSeasonSummer();
+        mainPagaTires.formSeasonWinter();
         searchFormCar.selectionOfParameters();
-        searchFormCar.search();
-        searchFormCar.checkPageURL("https://reifen.pkwteile.de/transporterreifen/sommerreifen/255-65-r17");
+        mainPagaTires.search();
+        mainPagaTires.checkPageURL("https://reifen.pkwteile.de/transporterreifen/winterreifen/205-55-r16");
+    }
+
+    @Feature("searchMoto")
+    @Test(groups = {"Regression"})
+    public void searchMoto() {
+        MainPagaTires mainPagaTires = new MainPagaTires();
+        SearchFormMoto searchFormMoto = new SearchFormMoto();
+        mainPagaTires.open();
+        mainPagaTires.clickCookiesButton();
+        mainPagaTires.clickMenubuttonMotorrad();
+        mainPagaTires.formSeasonWinter();
+        searchFormMoto.selectionOfParametersMoto();
+        mainPagaTires.search();
+        mainPagaTires.checkPageURL("https://reifen.pkwteile.de/motorradreifen/winterreifen/140-80-r17");
     }
 }
