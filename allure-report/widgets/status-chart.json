@@ -1,30 +1,50 @@
 [ {
-  "uid" : "3867c14a36015da7",
+  "uid" : "8f4c6b3462244beb",
   "name" : "searchOffroadSuv",
   "time" : {
-    "start" : 1572174872467,
-    "stop" : 1572174900003,
-    "duration" : 27536
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "195b6c174f5819d4",
-  "name" : "searchPKW",
-  "time" : {
-    "start" : 1572174900027,
-    "stop" : 1572174925896,
-    "duration" : 25869
+    "start" : 1573146077451,
+    "stop" : 1573146101548,
+    "duration" : 24097
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "90895724c7bc6b72",
+  "uid" : "eda3cc4f9105687",
+  "name" : "searchMoto",
+  "time" : {
+    "start" : 1573146050581,
+    "stop" : 1573146077431,
+    "duration" : 26850
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "614a2031d4e8a2ba",
+  "name" : "searchPKW",
+  "time" : {
+    "start" : 1573146101576,
+    "stop" : 1573146123856,
+    "duration" : 22280
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "29952191ae01c29c",
+  "name" : "setUp",
+  "time" : {
+    "start" : 1572546514141,
+    "stop" : 1572546514144,
+    "duration" : 3
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1b56b50db7d3d788",
   "name" : "searchLLKW",
   "time" : {
-    "start" : 1572174850719,
-    "stop" : 1572174872191,
-    "duration" : 21472
+    "start" : 1573146022349,
+    "stop" : 1573146050317,
+    "duration" : 27968
   },
   "status" : "passed",
   "severity" : "normal"

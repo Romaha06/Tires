@@ -56,9 +56,8 @@ public class TiresSearchTest extends BaseTest {
         mainPagaTires.open();
         mainPagaTires.clickCookiesButton();
         mainPagaTires.clickMenubuttonMotorrad();
-        mainPagaTires.formSeasonWinter();
-        searchFormMoto.selectionOfParametersMoto();
+        mainPagaTires.formSeasonAll();
         mainPagaTires.search();
-        mainPagaTires.checkPageURL("https://reifen.pkwteile.de/motorradreifen/winterreifen/140-80-r17");
+        mainPagaTires.checkPageURL("https://reifen.pkwteile.de/motorradreifen/ganzjahresreifen/3_50---r10");
     }
 }
