@@ -7,7 +7,7 @@ import utils.WebDriverFactory;
 
 public class SearchFormCar {
 
-    WebDriver driver = null;
+    WebDriver driver;
     UIutilities uIutilities;
 
 

@@ -2,23 +2,43 @@
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
   "children" : [ {
-    "name" : "Product defects",
+    "name" : "Test defects",
     "children" : [ {
-      "name" : "expected [https://reifen.pkwteile.de/offroadreifen/ganzjahresreifen/255-65-r] but found [https://reifen.pkwteile.de/offroadreifen/ganzjahresreifen/255-65-r17]",
+      "name" : "newSession\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'DESKTOP-8VADEPP', ip: '192.168.0.174', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'\nDriver info: driver.version: FirefoxDriver\nremote stacktrace: WebDriverError@chrome://marionette/content/error.js:175:5\nUnknownCommandError@chrome://marionette/content/error.js:471:5\ndespatch@chrome://marionette/content/server.js:295:13\nexecute@chrome://marionette/content/server.js:275:16\nonPacket/<@chrome://marionette/content/server.js:248:20\nonPacket@chrome://marionette/content/server.js:249:9\n_onJSONObjectReady/<@chrome://marionette/content/transport.js:501:20\n",
       "children" : [ {
-        "name" : "searchOffroadSuv",
-        "uid" : "3867c14a36015da7",
-        "parentUid" : "c91279add1302091a0e646efc20d64f9",
-        "status" : "failed",
+        "name" : "setUp",
+        "uid" : "29952191ae01c29c",
+        "parentUid" : "bf109ef9ab98b2372c26b9ee8e1f03dc",
+        "status" : "broken",
         "time" : {
-          "start" : 1572174872467,
-          "stop" : 1572174900003,
-          "duration" : 27536
+          "start" : 1572546514141,
+          "stop" : 1572546514144,
+          "duration" : 3
         },
-        "flaky" : false,
+        "flaky" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "c91279add1302091a0e646efc20d64f9"
+      "uid" : "bf109ef9ab98b2372c26b9ee8e1f03dc"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "expected [https://reifen.pkwteile.de/motorradreifen/winterreifen/140-80-r17] but found [https://reifen.pkwteile.de/motorradreifen/winterreifen/80-90-r17]",
+      "children" : [ {
+        "name" : "searchMoto",
+        "uid" : "eda3cc4f9105687",
+        "parentUid" : "ad17a555d31c95bcbb7c0f0615b2ff0f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1573146050581,
+          "stop" : 1573146077431,
+          "duration" : 26850
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ad17a555d31c95bcbb7c0f0615b2ff0f"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ]

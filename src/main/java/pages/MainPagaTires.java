@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.WebDriverFactory;
 
+import static pages.PageURLs.mainPageTYres;
+
 public class MainPagaTires {
 
     WebDriver driver;
@@ -31,7 +33,7 @@ public class MainPagaTires {
 
     @Step
     public void open() {
-        driver.get("https://reifen.pkwteile.de/");
+        driver.get(mainPageTYres);
         System.out.println("Page was opened.");
 
     }
@@ -40,7 +42,7 @@ public class MainPagaTires {
     public void clickCookiesButton() {
         System.out.println("Click Cookies button.");
         try {
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, 3);
             WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(buttonCookies));
             element.click();
         } catch (Exception e) {
