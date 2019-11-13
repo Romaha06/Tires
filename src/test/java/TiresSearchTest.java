@@ -1,8 +1,9 @@
 import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
-import pages.MainPagaTires;
-import pages.SearchFormCar;
-import pages.SearchFormMoto;
+import pagesPKW.MainPagaTires;
+import pagesPKW.SearchFormCar;
+import pagesPKW.SearchFormMoto;
+
 
 public class TiresSearchTest extends BaseTest {
 
@@ -17,7 +18,7 @@ public class TiresSearchTest extends BaseTest {
         mainPagaTires.formSeasonWinter();
         searchFormCar.selectionOfParameters();
         mainPagaTires.search();
-        mainPagaTires.checkPageURL("https://reifen.pkwteile.de/winterreifen/205-55-r16");
+        mainPagaTires.checkTitel("205/55 R16 PKW Winterreifen - billig online kaufen");
     }
 
     @Feature("searchOffroadSuv")

@@ -1,4 +1,4 @@
-package pages;
+package pagesPKW;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -9,7 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.WebDriverFactory;
 
-import static pages.PageURLs.mainPageTYres;
+import static org.testng.Assert.assertEquals;
+import static pagesPKW.PageURLs.mainPageTYres;
 
 public class MainPagaTires {
 
@@ -103,4 +104,11 @@ public class MainPagaTires {
         uIutilities.waitLoadPageUsingScript();
         Assert.assertEquals(WebDriverFactory.getDriver().getCurrentUrl(), expectedURL);
     }
+
+    @Step
+    public void checkTitel(String expectedTitel) {
+        uIutilities.waitLoadPageUsingScript();
+        assertEquals(WebDriverFactory.getDriver().getTitle(), expectedTitel);
+    }
+
 }
