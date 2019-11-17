@@ -47,5 +47,4 @@ public class SearchFormCar {
         height();
         size();
     }
-
 }
