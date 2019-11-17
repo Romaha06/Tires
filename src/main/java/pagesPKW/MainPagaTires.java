@@ -40,8 +40,15 @@ public class MainPagaTires {
     }
 
     @Step
-    public void clickCookiesButton() {
-        System.out.println("Click Cookies button.");
+    public void open(String url) {
+        driver.get(url);
+        System.out.println("Page was opened.");
+
+    }
+
+    @Step
+    public void closeCookie() {
+        System.out.println("Close cookie.");
         try {
             WebDriverWait wait = new WebDriverWait(driver, 3);
             WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(buttonCookies));

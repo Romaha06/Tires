@@ -5,6 +5,9 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import utils.WebDriverFactory;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 public class ListingPage {
 
     WebDriver driver;
@@ -25,14 +28,21 @@ public class ListingPage {
         uIutilities = new UIutilities(driver);
     }
 
-    public boolean checkForGrayButton() {
-        System.out.println("Check for gray button");
+    public void checkGrayBtnOnListing() {
+        uIutilities.waitLoadPageUsingScript();
+        while (checkElementIsDisplayed(nextPage)) {
+            assertFalse(checkElementIsDisplayed(outOfStock));
+            driver.findElement(nextPage).click();
+            uIutilities.waitLoadPageUsingScript();
+        }
+    }
+
+    public boolean checkElementIsDisplayed(By locator) {
         try {
-            driver.findElement(By.xpath(String.valueOf(outOfStock)));
+            driver.findElement(locator).isDisplayed();
         }catch (NoSuchElementException e) {
             return false;
         }
         return true;
     }
-
 }
