@@ -31,7 +31,7 @@ public class ListingPage {
     public void checkGrayBtnOnListing() {
         uIutilities.waitLoadPageUsingScript();
         while (checkElementIsDisplayed(nextPage)) {
-            assertFalse(checkElementIsDisplayed(outOfStock));
+            assertFalse(checkElementIsDisplayed(outOfStock), "Out of stock item displayed!");
             driver.findElement(nextPage).click();
             uIutilities.waitLoadPageUsingScript();
         }
