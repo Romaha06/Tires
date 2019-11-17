@@ -18,7 +18,6 @@ public class UIutilities {
 
 
     protected void click(By element, int retry, int timeoutSeconds) {
-
         // If the item is not found, try to find again
         try {
             Thread.sleep(TimeUnit.SECONDS.toMillis(1));
