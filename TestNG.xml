@@ -11,7 +11,7 @@
             </run>
         </groups>
         <classes>
-            <class name="TiresSearchTest"/>
+            <class name="TiresTest"/>
         </classes>
     </test>
 </suite>

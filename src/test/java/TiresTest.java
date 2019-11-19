@@ -7,7 +7,7 @@ import pagesPKW.SearchFormCar;
 import pagesPKW.SearchFormMoto;
 
 
-public class TiresSearchTest extends BaseTest {
+public class TiresTest extends BaseTest {
 
     @DataProvider(name = "data-provider")
     public Object[][] dataProviderData(){
