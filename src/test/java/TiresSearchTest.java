@@ -42,9 +42,9 @@ public class TiresSearchTest extends BaseTest {
         mainPagaTires.checkTitel("205/55 R16 PKW Winterreifen - billig online kaufen");
     }
 
-    @Feature("searchOffroadSuv")
+    @Feature("searchSUV")
     @Test(groups = {"Regression"})
-    public void searchOffroadSuv() {
+    public void searchSUV() {
         MainPagaTires mainPagaTires = new MainPagaTires();
         SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTires.open();
