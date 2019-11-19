@@ -1,5 +1,6 @@
 package pagesPKW;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,7 @@ public class ListingPage {
         uIutilities = new UIutilities(driver);
     }
 
+    @Step
     public void checkGrayBtnOnListing() {
         uIutilities.waitLoadPageUsingScript();
         while (checkElementIsDisplayed(nextPage)) {
@@ -42,6 +44,7 @@ public class ListingPage {
         return true;
     }
 
+    @Step
     public void addToBasket() {
         System.out.println("Add product to basket");
         uIutilities.click(addToBasket,3,10);
