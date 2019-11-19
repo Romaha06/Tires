@@ -12,7 +12,6 @@ public class TiresSearchTest extends BaseTest {
     @DataProvider(name = "data-provider")
     public Object[][] dataProviderData(){
         return new Object[][]{
-                {"https://www.pkwteile.de/ersatzteile-suche?keyword=Sto%C3%9Fd%C3%A4mpfer"},
                 {"https://reifen.pkwteile.de/sommerreifen"},
                 {"https://reifen.pkwteile.de/winterreifen"},
                 {"https://reifen.pkwteile.de/ganzjahresreifen"}
@@ -23,9 +22,10 @@ public class TiresSearchTest extends BaseTest {
     @Test(groups = {"Regression", "SKIP"},dataProvider="data-provider")
     public void checkGrayBtnOnListing(String url) {
         MainPagaTires mainPagaTires = new MainPagaTires();
+        ListingPage listingPage = new ListingPage();
         mainPagaTires.open(url);
         mainPagaTires.closeCookie();
-        new ListingPage().checkGrayBtnOnListing();
+        listingPage.checkGrayBtnOnListing();
     }
 
     @Feature("searchPKW")
@@ -49,7 +49,7 @@ public class TiresSearchTest extends BaseTest {
         SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTires.open();
         mainPagaTires.closeCookie();
-        mainPagaTires.clickMenuButtonOffroadSuv();
+        mainPagaTires.clickMenuButtonSUV();
         mainPagaTires.formSeasonSummer();
         searchFormCar.selectionOfParameters();
         mainPagaTires.search();
@@ -81,5 +81,15 @@ public class TiresSearchTest extends BaseTest {
         mainPagaTires.formSeasonAll();
         mainPagaTires.search();
         mainPagaTires.checkPageURL("https://reifen.pkwteile.de/motorradreifen/ganzjahresreifen/3_50---r10");
+    }
+
+    @Feature("addToBasket")
+    @Test(groups = {"Regression"}, dataProvider="data-provider")
+    public void addToBasket(String url) {
+        MainPagaTires mainPagaTires = new MainPagaTires();
+        ListingPage listingPage = new ListingPage();
+        mainPagaTires.open(url);
+        mainPagaTires.closeCookie();
+        listingPage.addToBasket();
     }
 }

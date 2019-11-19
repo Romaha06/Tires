@@ -19,8 +19,8 @@ public class MainPagaTires {
 
     private By buttonCookies = By.xpath("//div[@class='block-cookies__button']");
     private By buttonPKW = By.xpath("//img[@alt='PKW']");
-    private By buttonOffroad_SUV = By.xpath("//img[@alt='Offroad/SUV']");
-    private By buttonLLKW_Transporterreifen = By.xpath("//img[@alt='Transporter']");
+    private By buttonSUV = By.xpath("//img[@alt='Offroad/SUV']");
+    private By buttonLLKW = By.xpath("//img[@alt='Transporter']");
     private By buttonMotorradreifen = By.xpath("//img[@alt='Motorrad']");
     private By selectSeasonsWinter = By.xpath("//div[@class='season-tyre__label--winter']");
     private By selectSeasonsSummer = By.xpath("//div[@class='season-tyre__label--summer']");
@@ -65,15 +65,15 @@ public class MainPagaTires {
     }
 
     @Step
-    public void clickMenuButtonOffroadSuv() {
+    public void clickMenuButtonSUV() {
         System.out.println("Choosed type 'buttonOffroad_SUV'");
-        uIutilities.click(buttonOffroad_SUV, 3, 10);
+        uIutilities.click(buttonSUV, 3, 10);
     }
 
     @Step
     public void clickMenubuttonLLKW() {
         System.out.println("Choosed type 'buttonLLKW'");
-        uIutilities.click(buttonLLKW_Transporterreifen, 3, 10);
+        uIutilities.click(buttonLLKW, 3, 10);
     }
 
     @Step
