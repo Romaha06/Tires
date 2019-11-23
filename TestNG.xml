@@ -11,7 +11,9 @@
             </run>
         </groups>
         <classes>
-            <class name="TiresTest"/>
+            <class name="TestTiresSelector"/>
+            <class name="TestAddToBasket"/>
+            <class name="TestGrayBtn"/>
         </classes>
     </test>
 </suite>

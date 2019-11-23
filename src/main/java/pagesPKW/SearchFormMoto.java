@@ -23,7 +23,7 @@ public class SearchFormMoto {
 
     @Step
     public void widthMoto() {
-        System.out.println("Choose from Widht Moto.");
+        System.out.println("Choose from Width Moto.");
         uIutilities.click(selectWidthMoto, 3, 10);
         uIutilities.click(By.xpath("//option[@value='140']"), 3, 10);
     }

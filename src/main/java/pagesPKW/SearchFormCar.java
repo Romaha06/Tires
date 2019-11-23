@@ -23,7 +23,7 @@ public class SearchFormCar {
 
     @Step
     public void width() {
-        System.out.println("Choose from Widht.");
+        System.out.println("Choose from Width.");
         uIutilities.click(selectWidth, 3, 10);
         uIutilities.click(By.xpath("//option[@value='205']"), 3, 10);
     }

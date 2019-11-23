@@ -10,40 +10,45 @@ import org.testng.Assert;
 import utils.WebDriverFactory;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 import static pagesPKW.PageURLs.mainPageTYres;
 
-public class MainPagaTires {
+public class MainPagaTyres {
 
     WebDriver driver;
     UIutilities uIutilities;
+    ListingPage listingPage;
 
-    private By buttonCookies = By.xpath("//div[@class='block-cookies__button']");
-    private By buttonPKW = By.xpath("//img[@alt='PKW']");
-    private By buttonSUV = By.xpath("//img[@alt='Offroad/SUV']");
-    private By buttonLLKW = By.xpath("//img[@alt='Transporter']");
-    private By buttonMotorradreifen = By.xpath("//img[@alt='Motorrad']");
+    private By btnCookies = By.xpath("//div[@class='block-cookies__button']");
+    private By btnPKW = By.xpath("//img[@alt='PKW']");
+    private By btnSUV = By.xpath("//img[@alt='Offroad/SUV']");
+    private By btnLLKW = By.xpath("//img[@alt='Transporter']");
+    private By btnMotoTyres = By.xpath("//img[@alt='Motorrad']");
     private By selectSeasonsWinter = By.xpath("//div[@class='season-tyre__label--winter']");
     private By selectSeasonsSummer = By.xpath("//div[@class='season-tyre__label--summer']");
     private By selectSeasonsAll = By.xpath("//div[@class='season-tyre__label--all-weather']");
-    private By buttonTyresSearch = By.id("tyres_search");
+    private By btnTyresSearch = By.id("tyres_search");
+    private By btnAddBasketTop = By.xpath("//div[@class='basket_btn button active_red_button']");
 
-    public MainPagaTires() {
+
+    public MainPagaTyres() {
         this.driver = WebDriverFactory.getDriver();
         uIutilities = new UIutilities(driver);
+        listingPage = new ListingPage();
     }
 
     @Step
     public void open() {
         driver.get(mainPageTYres);
         System.out.println("Page was opened.");
-
     }
 
     @Step
-    public void open(String url) {
-        driver.get(url);
-        System.out.println("Page was opened.");
-
+    public void addToBasketFromBlockTop(){
+        System.out.println("Add item to basket from block top");
+        uIutilities.click(btnAddBasketTop,3,10);
+        uIutilities.click(listingPage.basket,3,10);
+        assertTrue(listingPage.checkElementIsDisplayed(listingPage.priceInBasket), "Item added to basket");
     }
 
     @Step
@@ -51,7 +56,7 @@ public class MainPagaTires {
         System.out.println("Close cookie.");
         try {
             WebDriverWait wait = new WebDriverWait(driver, 3);
-            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(buttonCookies));
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(btnCookies));
             element.click();
         } catch (Exception e) {
             Assert.assertTrue(true);
@@ -59,27 +64,27 @@ public class MainPagaTires {
     }
 
     @Step
-    public void clickMenuButtonPKW() {
-        System.out.println("Choosed type 'PKW'");
-        uIutilities.click(buttonPKW, 3, 10);
+    public void clickMenuBtnPKW() {
+        System.out.println("Choose type 'PKW'");
+        uIutilities.click(btnPKW, 3, 10);
     }
 
     @Step
-    public void clickMenuButtonSUV() {
-        System.out.println("Choosed type 'buttonOffroad_SUV'");
-        uIutilities.click(buttonSUV, 3, 10);
+    public void clickMenuBtnSUV() {
+        System.out.println("Choose type 'button Off-Road_SUV'");
+        uIutilities.click(btnSUV, 3, 10);
     }
 
     @Step
-    public void clickMenubuttonLLKW() {
-        System.out.println("Choosed type 'buttonLLKW'");
-        uIutilities.click(buttonLLKW, 3, 10);
+    public void clickMenuBtnLLKW() {
+        System.out.println("Choose type 'button LLKW'");
+        uIutilities.click(btnLLKW, 3, 10);
     }
 
     @Step
-    public void clickMenubuttonMotorrad() {
-        System.out.println("Choossed type 'buttonMotorrad'");
-        uIutilities.click(buttonMotorradreifen, 3, 10);
+    public void clickMenuBtnMoto() {
+        System.out.println("Choose type 'button moto'");
+        uIutilities.click(btnMotoTyres, 3, 10);
     }
 
     @Step
@@ -103,7 +108,7 @@ public class MainPagaTires {
     @Step
     public void search() {
         System.out.println("Click button Search.");
-        uIutilities.click(buttonTyresSearch, 3, 10);
+        uIutilities.click(btnTyresSearch, 3, 10);
     }
 
     @Step
@@ -113,9 +118,8 @@ public class MainPagaTires {
     }
 
     @Step
-    public void checkTitel(String expectedTitel) {
+    public void checkTitle(String expectedTitle) {
         uIutilities.waitLoadPageUsingScript();
-        assertEquals(WebDriverFactory.getDriver().getTitle(), expectedTitel);
+        assertEquals(WebDriverFactory.getDriver().getTitle(), expectedTitle);
     }
-
 }
