@@ -21,7 +21,7 @@ public class TestAddToBasket extends BaseTest {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         ListingPage listingPage = new ListingPage();
         listingPage.open(url);
-        mainPagaTyres.closeCookie();
+        mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         listingPage.addToBasket();
     }
 
@@ -31,7 +31,7 @@ public class TestAddToBasket extends BaseTest {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         ListingPage listingPage = new ListingPage();
         listingPage.open(url);
-        mainPagaTyres.closeCookie();
+        mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         listingPage.addToBasketFromProdPage();
     }
 
@@ -40,7 +40,7 @@ public class TestAddToBasket extends BaseTest {
     public void addToBasketFromBlockTop() {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         mainPagaTyres.open();
-        mainPagaTyres.closeCookie();
+        mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         mainPagaTyres.addToBasketFromBlockTop();
     }
 }

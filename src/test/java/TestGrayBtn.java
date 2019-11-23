@@ -22,7 +22,7 @@ public class TestGrayBtn extends BaseTest {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         ListingPage listingPage = new ListingPage();
         listingPage.open(url);
-        mainPagaTyres.closeCookie();
+        mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         listingPage.checkGrayBtnOnListing();
     }
 }
