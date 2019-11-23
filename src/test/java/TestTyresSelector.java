@@ -13,7 +13,7 @@ public class TestTyresSelector extends BaseTest {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTyres.open();
-        mainPagaTyres.closeCookie();
+        mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         mainPagaTyres.clickMenuBtnPKW();
         mainPagaTyres.formSeasonWinter();
         searchFormCar.selectionOfParameters();
@@ -27,7 +27,7 @@ public class TestTyresSelector extends BaseTest {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTyres.open();
-        mainPagaTyres.closeCookie();
+        mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         mainPagaTyres.clickMenuBtnSUV();
         mainPagaTyres.formSeasonSummer();
         searchFormCar.selectionOfParameters();
@@ -41,7 +41,7 @@ public class TestTyresSelector extends BaseTest {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         SearchFormCar searchFormCar = new SearchFormCar();
         mainPagaTyres.open();
-        mainPagaTyres.closeCookie();
+        mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         mainPagaTyres.clickMenuBtnLLKW();
         mainPagaTyres.formSeasonWinter();
         searchFormCar.selectionOfParameters();
@@ -55,7 +55,7 @@ public class TestTyresSelector extends BaseTest {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         SearchFormMoto searchFormMoto = new SearchFormMoto();
         mainPagaTyres.open();
-        mainPagaTyres.closeCookie();
+        mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         mainPagaTyres.clickMenuBtnMoto();
         mainPagaTyres.formSeasonAll();
         mainPagaTyres.search();

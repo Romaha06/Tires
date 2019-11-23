@@ -19,7 +19,7 @@ public class MainPagaTyres {
     UIutilities uIutilities;
     ListingPage listingPage;
 
-    private By btnCookies = By.xpath("//div[@class='block-cookies__button']");
+    public By btnCookies = By.xpath("//div[@class='block-cookies__button']");
     private By btnPKW = By.xpath("//img[@alt='PKW']");
     private By btnSUV = By.xpath("//img[@alt='Offroad/SUV']");
     private By btnLLKW = By.xpath("//img[@alt='Transporter']");
@@ -52,11 +52,11 @@ public class MainPagaTyres {
     }
 
     @Step
-    public void closeCookie() {
-        System.out.println("Close cookie.");
+    public void closePopup(By locator) {
+        System.out.println("Close popup.");
         try {
             WebDriverWait wait = new WebDriverWait(driver, 3);
-            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(btnCookies));
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
             element.click();
         } catch (Exception e) {
             Assert.assertTrue(true);
