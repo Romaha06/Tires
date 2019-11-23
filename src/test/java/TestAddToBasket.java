@@ -18,29 +18,29 @@ public class TestAddToBasket extends BaseTest {
     @Feature("addToBasket")
     @Test(groups = {"Regression"}, dataProvider = "data-provider")
     public void addToBasket(String url) {
-        MainPagaTyres mainPagaTires = new MainPagaTyres();
+        MainPagaTyres mainPagaTyres = new MainPagaTyres();
         ListingPage listingPage = new ListingPage();
         listingPage.open(url);
-        mainPagaTires.closeCookie();
+        mainPagaTyres.closeCookie();
         listingPage.addToBasket();
     }
 
     @Feature("addToBasketFromProdPage")
     @Test(groups = {"Regression"}, dataProvider = "data-provider")
     public void addToBasketFromProdPage(String url) {
-        MainPagaTyres mainPagaTires = new MainPagaTyres();
+        MainPagaTyres mainPagaTyres = new MainPagaTyres();
         ListingPage listingPage = new ListingPage();
         listingPage.open(url);
-        mainPagaTires.closeCookie();
+        mainPagaTyres.closeCookie();
         listingPage.addToBasketFromProdPage();
     }
 
     @Feature("addToBasketFromBlockTop")
     @Test(groups = {"Regression"})
     public void addToBasketFromBlockTop() {
-        MainPagaTyres mainPagaTires = new MainPagaTyres();
-        mainPagaTires.open();
-        mainPagaTires.closeCookie();
-        mainPagaTires.addToBasketFromBlockTop();
+        MainPagaTyres mainPagaTyres = new MainPagaTyres();
+        mainPagaTyres.open();
+        mainPagaTyres.closeCookie();
+        mainPagaTyres.addToBasketFromBlockTop();
     }
 }

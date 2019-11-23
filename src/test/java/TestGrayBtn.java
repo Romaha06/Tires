@@ -19,10 +19,10 @@ public class TestGrayBtn extends BaseTest {
     @Feature("Check gray buttons")
     @Test(groups = {"Regression", "SKIP"}, dataProvider = "data-provider")
     public void checkGrayBtnOnListing(String url) {
-        MainPagaTyres mainPagaTires = new MainPagaTyres();
+        MainPagaTyres mainPagaTyres = new MainPagaTyres();
         ListingPage listingPage = new ListingPage();
         listingPage.open(url);
-        mainPagaTires.closeCookie();
+        mainPagaTyres.closeCookie();
         listingPage.checkGrayBtnOnListing();
     }
 }
