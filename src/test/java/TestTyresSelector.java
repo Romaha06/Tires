@@ -1,18 +1,18 @@
 import io.qameta.allure.Feature;
 import org.testng.annotations.Test;
-import pagesPKW.MainPagaTyres;
-import pagesPKW.SearchFormCar;
-import pagesPKW.SearchFormMoto;
+import pagesPKW.*;
 
 
 public class TestTyresSelector extends BaseTest {
+
 
     @Feature("searchPKW")
     @Test(groups = {"Regression"})
     public void searchPKW() {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         SearchFormCar searchFormCar = new SearchFormCar();
-        mainPagaTyres.open();
+        BeforeSuite beforeSuite = new BeforeSuite();
+        beforeSuite.open("https://reifen.pkwteile.de");
         mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         mainPagaTyres.clickMenuBtnPKW();
         mainPagaTyres.formSeasonWinter();
@@ -26,7 +26,8 @@ public class TestTyresSelector extends BaseTest {
     public void searchSUV() {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         SearchFormCar searchFormCar = new SearchFormCar();
-        mainPagaTyres.open();
+        BeforeSuite beforeSuite = new BeforeSuite();
+        beforeSuite.open("https://reifen.pkwteile.de");
         mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         mainPagaTyres.clickMenuBtnSUV();
         mainPagaTyres.formSeasonSummer();
@@ -40,7 +41,8 @@ public class TestTyresSelector extends BaseTest {
     public void searchLLKW() {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         SearchFormCar searchFormCar = new SearchFormCar();
-        mainPagaTyres.open();
+        BeforeSuite beforeSuite = new BeforeSuite();
+        beforeSuite.open("https://reifen.pkwteile.de");
         mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         mainPagaTyres.clickMenuBtnLLKW();
         mainPagaTyres.formSeasonWinter();
@@ -54,7 +56,8 @@ public class TestTyresSelector extends BaseTest {
     public void searchMoto() {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         SearchFormMoto searchFormMoto = new SearchFormMoto();
-        mainPagaTyres.open();
+        BeforeSuite beforeSuite = new BeforeSuite();
+        beforeSuite.open("https://reifen.pkwteile.de");
         mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         mainPagaTyres.clickMenuBtnMoto();
         mainPagaTyres.formSeasonAll();

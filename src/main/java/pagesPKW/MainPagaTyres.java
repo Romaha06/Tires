@@ -37,11 +37,6 @@ public class MainPagaTyres {
         listingPage = new ListingPage();
     }
 
-    @Step
-    public void open() {
-        driver.get(mainPageTYres);
-        System.out.println("Page was opened.");
-    }
 
     @Step
     public void addToBasketFromBlockTop(){

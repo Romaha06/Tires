@@ -1,6 +1,7 @@
 import io.qameta.allure.Feature;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pagesPKW.BeforeSuite;
 import pagesPKW.ListingPage;
 import pagesPKW.MainPagaTyres;
 
@@ -21,7 +22,8 @@ public class TestGrayBtn extends BaseTest {
     public void checkGrayBtnOnListing(String url) {
         MainPagaTyres mainPagaTyres = new MainPagaTyres();
         ListingPage listingPage = new ListingPage();
-        listingPage.open(url);
+        BeforeSuite beforeSuite = new BeforeSuite();
+        beforeSuite.open(url);
         mainPagaTyres.closePopup(mainPagaTyres.btnCookies);
         listingPage.checkGrayBtnOnListing();
     }
