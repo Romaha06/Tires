@@ -9,7 +9,7 @@ public class TestTyresSelector extends BaseTest {
     @Feature("searchPKW")
     @Test(groups = {"Regression"})
     public void searchPKW() {
-        MainPagaTyres mainPagaTyres = new MainPagaTyres();
+        MainPageTyres mainPagaTyres = new MainPageTyres();
         SearchFormCar searchFormCar = new SearchFormCar();
         BeforeSuite beforeSuite = new BeforeSuite();
         beforeSuite.open("https://reifen.pkwteile.de");
@@ -24,7 +24,7 @@ public class TestTyresSelector extends BaseTest {
     @Feature("searchSUV")
     @Test(groups = {"Regression"})
     public void searchSUV() {
-        MainPagaTyres mainPagaTyres = new MainPagaTyres();
+        MainPageTyres mainPagaTyres = new MainPageTyres();
         SearchFormCar searchFormCar = new SearchFormCar();
         BeforeSuite beforeSuite = new BeforeSuite();
         beforeSuite.open("https://reifen.pkwteile.de");
@@ -39,7 +39,7 @@ public class TestTyresSelector extends BaseTest {
     @Feature("searchLLKW")
     @Test(groups = {"Regression"})
     public void searchLLKW() {
-        MainPagaTyres mainPagaTyres = new MainPagaTyres();
+        MainPageTyres mainPagaTyres = new MainPageTyres();
         SearchFormCar searchFormCar = new SearchFormCar();
         BeforeSuite beforeSuite = new BeforeSuite();
         beforeSuite.open("https://reifen.pkwteile.de");
@@ -54,7 +54,7 @@ public class TestTyresSelector extends BaseTest {
     @Feature("searchMoto")
     @Test(groups = {"Regression"})
     public void searchMoto() {
-        MainPagaTyres mainPagaTyres = new MainPagaTyres();
+        MainPageTyres mainPagaTyres = new MainPageTyres();
         SearchFormMoto searchFormMoto = new SearchFormMoto();
         BeforeSuite beforeSuite = new BeforeSuite();
         beforeSuite.open("https://reifen.pkwteile.de");

@@ -3,7 +3,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pagesPKW.BeforeSuite;
 import pagesPKW.ListingPage;
-import pagesPKW.MainPagaTyres;
+import pagesPKW.MainPageTyres;
 
 public class TestAddToBasket extends BaseTest {
 
@@ -19,7 +19,7 @@ public class TestAddToBasket extends BaseTest {
     @Feature("addToBasket")
     @Test(groups = {"Regression"}, dataProvider = "data-provider")
     public void addToBasket(String url) {
-        MainPagaTyres mainPagaTyres = new MainPagaTyres();
+        MainPageTyres mainPagaTyres = new MainPageTyres();
         ListingPage listingPage = new ListingPage();
         BeforeSuite beforeSuite = new BeforeSuite();
         beforeSuite.open(url);
@@ -30,7 +30,7 @@ public class TestAddToBasket extends BaseTest {
     @Feature("addToBasketFromProdPage")
     @Test(groups = {"Regression"}, dataProvider = "data-provider")
     public void addToBasketFromProdPage(String url) {
-        MainPagaTyres mainPagaTyres = new MainPagaTyres();
+        MainPageTyres mainPagaTyres = new MainPageTyres();
         ListingPage listingPage = new ListingPage();
         BeforeSuite beforeSuite = new BeforeSuite();
         beforeSuite.open(url);
@@ -42,7 +42,7 @@ public class TestAddToBasket extends BaseTest {
     @Feature("addToBasketFromBlockTop")
     @Test(groups = {"Regression"})
     public void addToBasketFromBlockTop() {
-        MainPagaTyres mainPagaTyres = new MainPagaTyres();
+        MainPageTyres mainPagaTyres = new MainPageTyres();
         BeforeSuite beforeSuite = new BeforeSuite();
         beforeSuite.open("https://reifen.pkwteile.de/");
         mainPagaTyres.closePopup(mainPagaTyres.btnCookies);

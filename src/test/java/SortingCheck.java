@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import pagesPKW.BeforeSuite;
 import pagesPKW.ListingPage;
 
-public class SortingСheck extends BaseTest {
+public class SortingCheck extends BaseTest {
 
     @DataProvider(name = "data-provider")
     public Object[][] dataProviderData() {
