@@ -11,9 +11,8 @@ import utils.WebDriverFactory;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-import static pagesPKW.PageURLs.mainPageTYres;
 
-public class MainPagaTyres {
+public class MainPageTyres {
 
     WebDriver driver;
     UIutilities uIutilities;
@@ -31,7 +30,7 @@ public class MainPagaTyres {
     private By btnAddBasketTop = By.xpath("//div[@class='basket_btn button active_red_button']");
 
 
-    public MainPagaTyres() {
+    public MainPageTyres() {
         this.driver = WebDriverFactory.getDriver();
         uIutilities = new UIutilities(driver);
         listingPage = new ListingPage();

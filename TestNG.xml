@@ -14,6 +14,7 @@
             <class name="TestTyresSelector"/>
             <class name="TestAddToBasket"/>
             <class name="TestGrayBtn"/>
+            <class name="SortingCheck"/>
         </classes>
     </test>
 </suite>

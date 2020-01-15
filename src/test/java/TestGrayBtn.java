@@ -3,7 +3,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pagesPKW.BeforeSuite;
 import pagesPKW.ListingPage;
-import pagesPKW.MainPagaTyres;
+import pagesPKW.MainPageTyres;
 
 public class TestGrayBtn extends BaseTest {
 
@@ -20,7 +20,7 @@ public class TestGrayBtn extends BaseTest {
     @Feature("Check gray buttons")
     @Test(groups = {"Regression", "SKIP"}, dataProvider = "data-provider")
     public void checkGrayBtnOnListing(String url) {
-        MainPagaTyres mainPagaTyres = new MainPagaTyres();
+        MainPageTyres mainPagaTyres = new MainPageTyres();
         ListingPage listingPage = new ListingPage();
         BeforeSuite beforeSuite = new BeforeSuite();
         beforeSuite.open(url);

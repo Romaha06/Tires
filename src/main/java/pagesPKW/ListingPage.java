@@ -18,7 +18,7 @@ public class ListingPage {
 
     WebDriver driver;
     UIutilities uIutilities;
-    MainPagaTyres mainPagaTyres;
+    MainPageTyres mainPagaTyres;
 
     private By nextPage = By.xpath("//a[@rel='next']");
     private By outOfStock = By.xpath("//div[@class='vers_box grey']");
@@ -92,7 +92,7 @@ public class ListingPage {
     @Step
     public void addToBasketFromProdPage(){
         System.out.println("Add item to basket from product page");
-        mainPagaTyres = new MainPagaTyres();
+        mainPagaTyres = new MainPageTyres();
         uIutilities.click(prodPageLink,3,10);
         uIutilities.click(btnAddBasketProdPage,3,10);
         mainPagaTyres.closePopup(closePopupProdPage);
